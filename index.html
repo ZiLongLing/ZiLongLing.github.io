@@ -1,1 +1,105 @@
-<h1>你好，我是子龙</h1>
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style type="text/css">
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .collect-item {
+            padding-bottom: 20px;
+        }
+
+        .long-title {
+            font-size: 24px;
+        }
+
+        .long-centent {
+            font-size: 16px;
+            height: 32px;
+            color: #606266;
+        }
+
+        .long-date {
+            font-size: 16px;
+            color: #909399;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1 style="text-align: center;font-weight: 700;color: #303133;margin: 0;padding: 15px;">收藏链接</h1>
+        <el-row>
+            <el-col :span="2">
+                &nbsp;
+            </el-col>
+            <el-col :span="20">
+                <el-row :gutter="20">
+                    <el-col :lg="8" :xs="24" v-for="item in collect" :key="item.title" class="collect-item">
+                        <el-card>
+                            <el-link class="long-title" type="primary" target="_blank" :href="item.link">
+                                {{item.title}}
+                            </el-link>
+                            <div class="long-centent">{{item.desc}}</div>
+                            <div class="long-date">{{item.createDate}}</div>
+                        </el-card>
+                    </el-col>
+                </el-row>
+            </el-col>
+            <el-col :span="2">
+                &nbsp;
+            </el-col>
+        </el-row>
+    </div>
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                text: 'false',
+                collect: [
+                    {
+                        title: '搭建个人网站',
+                        desc: '利用github搭建个人网站（无需购买云服务器）',
+                        link: 'https://blog.csdn.net/princek123/article/details/84067942',
+                        createDate: '2019-4-26'
+                    },
+                    {
+                        title: '搭建Vue项目',
+                        desc: '搭建 vue-cli + webpack 安装配置',
+                        link: 'https://www.cnblogs.com/chenjunwei/p/7084229.html',
+                        createDate: '2019-4-26'
+                    },
+                    {
+                        title: 'nodeJS为npm设置http代理',
+                        desc: 'nodeJS为npm设置http代理',
+                        link: 'https://blog.csdn.net/c11073138/article/details/82940240',
+                        createDate: '2019-4-26'
+                    },
+                    {
+                        title: 'VS Code 插件推荐',
+                        desc: 'VS Code 插件推荐',
+                        link: 'https://www.jianshu.com/p/282d30e38f51',
+                        createDate: '2019-4-26'
+                    }
+                ]
+            }
+        }
+    })
+</script>
+
+</html>
