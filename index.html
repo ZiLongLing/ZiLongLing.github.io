@@ -2,6 +2,9 @@
 <html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+    <title>龙的收藏</title>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./icon.png" />
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <style type="text/css">
         body,
@@ -34,11 +37,19 @@
             color: #909399;
             padding: 10px 0;
         }
+
+        [v-cloak] {
+            display: none;
+        }
+
+        .el-card__body {
+            height: 90px;
+        }
     </style>
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" v-cloak>
         <h1 style="text-align: center;font-weight: 700;color: #303133;margin: 0;padding: 15px;">收藏链接</h1>
         <el-row>
             <el-col :span="2">
@@ -65,44 +76,30 @@
 </body>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://unpkg.com/jquery@3.4.0/dist/jquery.min.js"></script>
 <script>
     new Vue({
         el: '#app',
         data: function () {
             return {
-                text: 'false',
-                collect: [
-                    {
-                        title: '搭建个人网站',
-                        desc: '利用github搭建个人网站（无需购买云服务器）',
-                        link: 'https://blog.csdn.net/princek123/article/details/84067942',
-                        createDate: '2019-4-26'
-                    },
-                    {
-                        title: '搭建Vue项目',
-                        desc: '搭建 vue-cli + webpack 安装配置',
-                        link: 'https://www.cnblogs.com/chenjunwei/p/7084229.html',
-                        createDate: '2019-4-26'
-                    },
-                    {
-                        title: 'nodeJS为npm设置http代理',
-                        desc: 'nodeJS为npm设置http代理',
-                        link: 'https://blog.csdn.net/c11073138/article/details/82940240',
-                        createDate: '2019-4-26'
-                    },
-                    {
-                        title: 'VS Code 插件推荐',
-                        desc: 'VS Code 插件推荐',
-                        link: 'https://www.jianshu.com/p/282d30e38f51',
-                        createDate: '2019-4-26'
-                    },
-                    {
-                        title: '基于vue-cli快速构建',
-                        desc: '基于vue-cli快速构建',
-                        link: 'https://www.jianshu.com/p/2769efeaa10a',
-                        createDate: '2019-4-26'
+                collect: []
+            }
+        },
+        mounted: function () {
+            this.loadData()
+        },
+        methods: {
+            loadData: function () {
+                let that = this
+                $.ajax({
+                    type: "get",
+                    url: "https://zilongling.github.io/db.json",
+                    async: true,
+                    dataType: "json",
+                    success: function (result) {
+                        that.collect = result
                     }
-                ]
+                });
             }
         }
     })
