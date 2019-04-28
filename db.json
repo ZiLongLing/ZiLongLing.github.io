@@ -22,5 +22,23 @@
         "desc": "VS Code 插件推荐",
         "link": "https: //www.jianshu.com/p/282d30e38f51",
         "createDate": "2019-4-26"
+    },
+    {
+        "title": "基于vue-cli快速构建",
+        "desc": "基于vue-cli快速构建",
+        "link": "https: //www.jianshu.com/p/2769efeaa10a",
+        "createDate": "2019-4-26"
+    },
+    {
+        "title": "Swagger2",
+        "desc": "Swagger2",
+        "link": "http://www.justdojava.com/2019/03/28/java-swagger/",
+        "createDate": "2019-4-28"
+    },
+        {
+        "title": "Java多线程",
+        "desc": "Java多线程",
+        "link": "http://www.justdojava.com/2019/03/26/java-thread/",
+        "createDate": "2019-4-28"
     }
 ]
