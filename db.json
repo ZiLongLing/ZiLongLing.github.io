@@ -46,5 +46,11 @@
         "desc": "分布式事务框架",
         "link": "http://www.txlcn.org",
         "createDate": "2019-4-28"
+    },
+    {
+        "title": "vue-cli 3.0",
+        "desc": "vue-cli 3.0 版本与3.0以下版本在搭建项目时的区别",
+        "link": "https://blog.csdn.net/zhumany_csdn/article/details/82910656",
+        "createDate": "2019-5-7"
     }
 ]
