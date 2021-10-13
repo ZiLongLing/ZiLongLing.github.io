@@ -64,5 +64,17 @@
         "desc": "Java 技术驿站-一个专注于 Java 技术分享的精品博客网站",
         "link": "http://cmsblogs.com/",
         "createDate": "2019-6-3"
+    },
+    {
+        "title": "Apache POI在.docx文件中设置权限区域",
+        "desc": "Apache POI在.docx文件中设置权限区域",
+        "link": "http://cn.voidcc.com/question/p-npkyngrh-es.html",
+        "createDate": "2021-10-13"
+    },
+    {
+        "title": "使用NIO上传与合并文件（分片上传结果集）",
+        "desc": "使用NIO上传与合并文件（分片上传结果集）",
+        "link": "https://www.jianshu.com/p/d8ee931b0550",
+        "createDate": "2021-10-13"
     }
 ]
