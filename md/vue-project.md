@@ -23,7 +23,7 @@
 │ ├── components # 公共组件 <br/>
 │ ├── mock # 异步模拟 ajax 调用接口 <br/>
 │ ├── router # 路由相关 <br/>
-│ ├── vuex # 状态管理相关 <br/>
+│ ├── store # 状态管理相关 <br/>
 │ ├── utils # 工具类，方法 <br/>
 │ ├── views # 页面相关 <br/>
 │ ├── App.vue # 页面入口文件 <br/>
